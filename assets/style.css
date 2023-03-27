@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comfortaa', cursive;
+}
+
+.nav{
+    grid-area: nav;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem 1.5rem 2rem 1.5rem;
+    padding-left: 2rem;
+    background-color: #7fd2b6;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.menu{
+    display: none
+}
+
+.search{
+    grid-area: search;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding:1rem 0 1rem 0 ;
+    font-weight: 100;
+    background-color: #d7d3d4;
+    color: #000;
+}
+
+.search select {
+    padding: 0.4rem 5rem 0.4rem 5rem;
+    font-size: 0.9rem;
+    border: 1px solid;
+}
+
+.main{
+    grid-area: main;
+    height: 100%;
+}
+
+.card-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    overflow-y: auto;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #d7d3d4;
+    gap: 1.5rem;
+}
+
+.card img{
+    width: 300px;
+    height: 400px;
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 0 1rem 0;
+}
+
+.card-body h5{
+    font-size: 1.2rem;
+}
+
+.card-body button{
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    background-color: #7fd2b6;
+    border: 1px solid #d7d3d4;
+    color: #fff;
+    font-weight: 300;
+}
+
+.scroll-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+}
+
+.scroll-section div{
+    border: 0.5px solid #d7d3d4;
+    width: 2.3rem;
+    height: 2rem;
+    text-align: center;
+    padding-top: 0.3rem;
+}
+
+.scroll-section p{
+    border: 0.5px solid #d7d3d4;
+    width: 2.3rem;
+    height: 2rem;
+    text-align: center;
+    padding-top: 0.3rem;
+}
+
+.footer{
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0rem 2rem 0rem;
+    background-color: #7fd2b6;
+    color: #fff;
+    font-weight: 500;
+}
+
+.footer div{
+    display: flex;
+    gap: 0.5rem;
+    font-size: 1.6rem;
+}
+
+.grid{
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+    'nav'
+    'search'
+    'main'
+    'footer';
+}
+
+@media (min-width:576px) {
+    .grid{
+        grid-template-areas:
+        'nav nav'
+        'search main'
+        'footer footer';
+        grid-template-columns: 1fr 5fr;
+    }
+
+    .nav i{
+        display: none;
+    }
+
+    .menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0.5rem;
+        font-size: 0.9rem;
+        font-weight: 100;
+    }
+
+    .search{
+        justify-content:flex-start;
+        padding: 1rem;
+    }
+
+    .search select {
+        padding: 0.4rem 2rem 0.4rem 2rem;
+        font-size: 0.9rem;
+        border: 1px solid;
+    }
+
+    .card img{
+        width: 220px;
+        height: 250px;
+    }
+}
+
+@media (min-width:992px) {
+    .grid{
+        grid-template-areas:
+        'nav search'
+        'nav main'
+        'footer main';
+        grid-template-columns: 1fr 4fr;
+    }
+    .nav{
+        font-size: 1.1rem;
+        font-weight: 700;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+
+    }
+
+    .nav i{
+        display: none;
+    }
+
+    .menu{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        font-size: 0.9rem;
+        font-weight: 100;
+    }
+
+    .card img{
+        width: 180px;
+        height: 250px;
+    }
+
+    .footer{
+        background-color: #48ab8a;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        font-size: 0.8rem;
+        text-align: center;
+    }
+}
+
+
+@media (min-width:1214px) {
+    .card img{
+        width: 200px;
+        height: 250px;
+    }
+}
